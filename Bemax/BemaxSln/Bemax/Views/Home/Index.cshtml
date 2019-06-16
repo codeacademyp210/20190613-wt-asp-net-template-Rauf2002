@@ -1,0 +1,422 @@
+﻿@model Bemax.Models.ViewModelHome
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<!-- #Content -->
+<!-- Slider -->
+<section>
+    <div class="rev_slider_wrapper">
+        <div class="rev_slider" id="slide-1" data-version="5.4.4">
+            <ul>
+                @foreach (var item in Model.BgSlider)
+                {
+                    <li data-transition="fade">
+                        <img src="~/Public/images/@item.Photo" alt="Work" class="rev-slidebg">
+                        <div class="tp-caption slide-heading-2" data-x="center" data-y="center" data-transform_in="y:-80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:-80px;opacity:0;s:300;" data-voffset="-70" data-start="900" data-fontsize="['30','30','24', '24']">@item.Title1</div>
+                        <div class="tp-caption slide-heading-1" data-x="center" data-y="center" data-transform_in="y:80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:80px;opacity:0;s:300;" data-start="1300" data-fontsize="['72','72','52','50','46', '42']">@item.Title2</div>
+                        <div class="tp-caption" data-x="center" data-y="center" data-transform_in="y:100px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:200px;opacity:0;s:300;" data-voffset="95" data-start="1600">
+                            <a href="#" class="slide-button">@item.Button</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Slider -->
+<!-- Hire us -->
+<section>
+    <div class="section-wrapper bg-blue">
+        <div class="hire-us">
+            <div class="container">
+                <div class="hire-us-container">
+                    @foreach (var item in Model.Description)
+                    {
+                        <div class="hire-us-text m-b-2">
+                            <p>@item.Sentence</p>
+                        </div>
+                        <div class="hire-us-button">
+                            <a href="#">@item.Button</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hire Us -->
+<!-- Icon box -->
+<section>
+    <div class="section-wrapper">
+        <div class="container py-50">
+            <div class="row justify-content-center">
+                @foreach (var item in Model.Cards)
+                {
+                    <div class="col-lg-4 col-md-8">
+                        <div class="iconbox iconbox-style-1">
+                            <div class="iconbox-container">
+                                <div class="iconbox-image">
+                                    <img src="~/Public/images/@item.Photo" alt="Image 1">
+                                </div>
+                                <div class="iconbox-content">
+                                    <h4 class="iconbox-content-heading">
+                                        <i class="fa fa-@item.Icon"></i>
+                                        @item.Title
+                                    </h4>
+                                    <div class="iconbox-content-body">
+                                        <p>
+                                           @item.Text
+                                        </p>
+                                        <a href="#">
+                                            <i class="fa fa-plus-square"></i>Read more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Icon box -->
+<!-- Icon box -->
+<section>
+    <div class="section-wrapper bg-gray p-t-62 p-b-45">
+        <div class="container">
+            <div class="section-title">
+                <h3>We are bemax</h3>
+                <div class="title-border m-b-67"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-desktop"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Responsive Design</a>
+                                <div class="icon-content-body">
+                                    <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-diamond"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Very Easy Customizie</a>
+                                <div class="icon-content-body">
+                                    <p>Etiam mollis dui diam, eget accumsan neque consectetur quis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-bullhorn"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Free Font Icons</a>
+                                <div class="icon-content-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-tablet"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Moblie Ready</a>
+                                <div class="icon-content-body">
+                                    <p>Donec at consequat tortor. Etiam ut ipsum sit amet diam pulvinar efficitur quis vitae</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Modern Style</a>
+                                <div class="icon-content-body">
+                                    <p>Suspendisse eu congue mauris. Class aptent taciti sociosqu ad litora torquent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="iconbox iconbox-style-2">
+                        <div class="iconbox-container">
+                            <div class="iconbox-image">
+                                <a href="#">
+                                    <i class="fa fa-comments"></i>
+                                </a>
+                            </div>
+                            <div class="iconbox-content">
+                                <a href="#" class="iconbox-content-heading">Awesome Support</a>
+                                <div class="icon-content-body">
+                                    <p>Curabitur laoreet auctor sem, sodales fermentum purus rutrum in</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Iconbox -->
+<!-- Latest BLog-->
+<section>
+    <div class="section-wrapper bg-black-1 p-t-70 p-b-80">
+        <div class="container">
+            <div class="section-title section-title-style-1">
+                <h3>Latest Projects</h3>
+                <div class="title-border m-b-67"></div>
+            </div>
+            <div class="owl-carousel js-owl-nav owl-nav-1" data-items="4" data-loop="true" data-responsive='{"0":{"items":"1"},"576":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"}}'>
+                @foreach (var item in Model.Projects)
+                {
+                    <div class="project">
+                        <div class="project-container">
+                            <div class="project-image">
+                                <img src="~/Public/images/@item.Photo" alt="Project 1">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-content-body">
+                                    <a href="#" class="project-title">@item.Title</a>
+                                    <div class="project-label">
+                                        <a href="#">@item.Text</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Latest Blog -->
+<!-- Why Choose Us -->
+<section>
+    <div class="section-wrapper p-t-62 p-b-95">
+        <div class="container">
+            <div class="section-title">
+                <h3>Why Choose Us</h3>
+                <div class="title-border m-b-46"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="video p-t-10">
+                        <div class="video-image-thumbnail">
+                            <img src="~/Public/images/video_01.jpg" alt="Video">
+                        </div>
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/embed/keDneypw3HY?autoplay=1">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </div>
+                        <div class="play-video">
+                            <iframe name="showvideo" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-r-5">
+                    @foreach (var item in Model.Choose)
+                    {
+                        <div class="iconbox iconbox-style-3">
+                            <div class="iconbox-container">
+                                <div class="iconbox-content">
+                                    <a href="#" class="iconbox-content-heading">
+                                        <i class="fa fa-@item.Icon"></i>@item.Title
+                                    </a>
+                                    <div class="iconbox-content-body">
+                                        <p>@item.Text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Why Choose us -->
+<!-- Hire Us -->
+<section>
+    <div class="section-wrapper bg-gray">
+        <div class="hire-us hire-us-style-1">
+            <div class="container">
+                @foreach (var item in Model.Work)
+                {
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="hire-us-container">
+                                <div class="section-title">
+                                    <h3>@item.Title</h3>
+                                    <div class="title-border m-b-30"></div>
+                                </div>
+                                <div class="hire-us-text">
+                                    <p>@item.Text</p>
+                                </div>
+                                <div class="hire-us-button">
+                                    <a href="#">@item.Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="hire-us-image">
+                                <img src="~/Public/images/@item.Photo" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hire Us -->
+<!-- Latest Blog + Testimonial -->
+<section>
+    <div class="section-wrapper py-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title justify-content-start js-owl-nav-1">
+                        <h3 class="text-left">
+                            Latest blog Posts
+                            <span class="au-owl-prev">
+                                <i class="fa fa-angle-left"></i>
+                            </span>
+                            <span class="au-owl-next">
+                                <i class="fa fa-angle-right"></i>
+                            </span>
+                        </h3>
+                        <div class="title-border m-b-10"></div>
+                        <div class="owl-carousel" data-items="1" data-loop="true">
+                            @foreach (var blog in Model.Blog)
+                            {
+                                <div class="blog">
+                                    <div class="blog-container">
+                                        <div class="blog-image">
+                                            <div class="blog-image-container">
+                                                <img src="~/Public/images/@blog.Photo" alt="Blog">
+                                                <span class="blog-date">
+                                                    @blog.Date
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content">
+                                            <a href="#" class="blog-content-title">@blog.Title</a>
+                                            <p class="blog-content-text">@blog.Text</p>
+                                            <div class="blog-button">
+                                                <div class="blog-tags">
+                                                    <i class="fa fa-tags"></i>
+                                                    <a href="#">Development</a>,
+                                                    <a href="#">Maketing</a>
+                                                </div>
+                                                <div class="blog-readmore">
+                                                    <a href="#">
+                                                        <i class="fa fa-plus-square"></i>Read more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title justify-content-start js-owl-nav-1">
+                        <h3 class="text-left">
+                            Testimonials
+                            <span class="au-owl-prev">
+                                <i class="fa fa-angle-left"></i>
+                            </span>
+                            <span class="au-owl-next">
+                                <i class="fa fa-angle-right"></i>
+                            </span>
+                        </h3>
+                        <div class="title-border m-b-27"></div>
+                        <div class="owl-carousel" data-items="1" data-loop="true">
+                            @foreach (var item in Model.Test)
+                            {
+                                <div class="testimonial testi-style-1">
+                                    <div class="testi-container">
+                                        <div class="testi-content">
+                                            <p>@item.Text</p>
+                                        </div>
+                                        <div class="testi-author">
+                                            <div class="testi-author-image">
+                                                <img src="~/Public/images/@item.Photo" alt="Alex">
+                                            </div>
+                                            <div class="testi-author-content">
+                                                <a href="#" class="testi-author-name">@item.Name</a>
+                                                <p class="testi-author-job">@item.Position</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Latest Blog -->
+<!-- Partner -->
+<section>
+    <div class="section-wrapper bg-gray-1 py-50">
+        <div class="container">
+            <div class="owl-carousel" data-responsive='{"0":{"items":"1"},"576":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"6"}}'>
+                @foreach (var item in Model.Logo)
+                {
+                    <div class="partner">
+                        <img src="~/Public/images/@item.Photo" alt="Partner 01">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Partner -->
